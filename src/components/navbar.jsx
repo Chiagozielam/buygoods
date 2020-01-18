@@ -1,31 +1,40 @@
 import React from "react";
-import { Menu, Segment } from 'semantic-ui-react';
+import { Dropdown, Icon, Menu, Segment } from "semantic-ui-react";
+import styles from "./navbar.module.css";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-
   return (
     <div>
-      <Menu attached="top">
-        
+      <Menu className={styles["topNav"]} attached="top">
+        <Link to="/"><p className={`${styles["logo"]}`}>Buygoods</p></Link>
 
         <Menu.Menu position="right">
-          <div className="ui right aligned category search item">
-            <div className="ui transparent icon input">
-              <input
-                className="prompt"
-                type="text"
-                placeholder="Search animals..."
-              />
-              <i className="search link icon" />
-            </div>
-            <div className="results" />
-          </div>
+								<Menu.Item
+          name='Help'
+        />
+          <Dropdown item text="Account" simple>
+            <Dropdown.Menu>
+              <Dropdown.Item>Create Account</Dropdown.Item>
+              <Dropdown.Item>Sign In</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Header>Export</Dropdown.Header>
+              <Dropdown.Item>Share</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Menu.Menu>
       </Menu>
-
-      <Segment attached="bottom">
-        <img src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-      </Segment>
+      {/* <div className="ui right aligned category search item">
+        <div className="ui transparent icon input">
+          <input
+            className="prompt"
+            type="text"
+            placeholder="Search animals..."
+          />
+          <i className="search link icon" />
+        </div>
+        <div className="results" />
+      </div> */}
     </div>
   );
 };

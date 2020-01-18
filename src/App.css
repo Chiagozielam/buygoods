@@ -1,3 +1,10 @@
+:root{
+  --main-dark-col : #15202B;
+  --main-orange-col: #F81D02;
+  --main-white-col: #ffffff;
+}
+
 body{
   font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
 }
