@@ -15,11 +15,8 @@ const Navbar = () => {
         />
           <Dropdown item text="Account" simple>
             <Dropdown.Menu>
-              <Dropdown.Item>Create Account</Dropdown.Item>
-              <Dropdown.Item>Sign In</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Header>Export</Dropdown.Header>
-              <Dropdown.Item>Share</Dropdown.Item>
+              <Dropdown.Item><Link to="/register">Create Account</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/login">Login</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Menu>
